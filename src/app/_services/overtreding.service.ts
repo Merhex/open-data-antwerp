@@ -15,14 +15,4 @@ export class OvertredingService {
   getOvertredingen() {
     return this.http.get<Overtreding[]>(this.apiUrl);
   }
-
-  showData() {
-    const data = [{value: 50, name: 'Snelheid'}];
-
-    this.getOvertredingen().subscribe((res: Overtreding[]) => {
-      data.push({value: 50, name: 'Snelheid'});
-    });
-
-    return data;
-  }
 }

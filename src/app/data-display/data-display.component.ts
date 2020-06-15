@@ -22,7 +22,7 @@ export class DataDisplayComponent implements OnInit {
     legend: {
       x: 'center',
       y: 'bottom',
-      data: ['Snelheid', 'Roodlicht', 'Totaal']
+      data: ['Snelheid', 'Roodlicht', 'Passanten']
     },
     calculable: true,
     series: [{
@@ -33,7 +33,7 @@ export class DataDisplayComponent implements OnInit {
       data: [
         {value: 0, name: 'Snelheid'},
         {value: 0, name: 'Roodlicht'},
-        {value: 0, name: 'Totaal'}
+        {value: 0, name: 'Passanten'}
       ]
     }]
   };
@@ -67,7 +67,7 @@ export class DataDisplayComponent implements OnInit {
               value: data.reduce((a, b) => {
               return a + Number(b.aantal_passanten);
               }, 0),
-              name: 'Totaal'}
+              name: 'Passanten'}
           ]}]
       };
     });
